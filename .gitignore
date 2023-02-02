@@ -1,0 +1,6 @@
+# code editors
+.idea
+.vscode
+
+# docker volumes
+volumes
