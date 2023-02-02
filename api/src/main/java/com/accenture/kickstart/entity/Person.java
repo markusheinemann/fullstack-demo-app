@@ -8,8 +8,8 @@ import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
-@Entity
-public class People {
+@Entity(name = "people")
+public class Person {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

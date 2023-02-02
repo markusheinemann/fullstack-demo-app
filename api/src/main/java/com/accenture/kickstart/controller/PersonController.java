@@ -1,7 +1,7 @@
 package com.accenture.kickstart.controller;
 
-import com.accenture.kickstart.entity.People;
-import com.accenture.kickstart.repository.PeopleRepository;
+import com.accenture.kickstart.entity.Person;
+import com.accenture.kickstart.repository.PersonRepository;
 import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,23 +13,23 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @CrossOrigin
 @RequestMapping("/v1/people")
-public class PeopleController {
+public class PersonController {
 
-    private final PeopleRepository peopleRepository;
+    private final PersonRepository personRepository;
 
-    public PeopleController(PeopleRepository peopleRepository) {
-        this.peopleRepository = peopleRepository;
+    public PersonController(PersonRepository personRepository) {
+        this.personRepository = personRepository;
     }
 
     @GetMapping("")
-    public Iterable<People> listAll() {
-        var people = peopleRepository.findAll();
+    public Iterable<Person> listAll() {
+        var people = personRepository.findAll();
         return people;
     }
 
     @PostMapping("")
-    public People create(@Valid @RequestBody People person) {
-        return this.peopleRepository.save(person);
+    public Person create(@Valid @RequestBody Person person) {
+        return this.personRepository.save(person);
     }
 
 }
