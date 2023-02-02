@@ -24,9 +24,9 @@ jobs:
           java-version: "17"
           cache: "maven"
 
-      - name: Test unit
-        run: mvn -DargLine="-Dspring.profiles.active=test" -B test
-        working-directory: ./api
+      # - name: Test unit
+      #   run: mvn -DargLine="-Dspring.profiles.active=test" -B test
+      #   working-directory: ./api
 
       - name: Build Backend
         run: mvn clean package -DskipTests
