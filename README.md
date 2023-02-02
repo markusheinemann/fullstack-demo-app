@@ -1,4 +1,4 @@
-# Demo App
+# fullstack-demo-app
 
 This is an application to demonstrate the interaction between a database 
 and an user interface through a restful api using Angular, Java and MySQL.
@@ -22,9 +22,9 @@ necessary docker images. Three containers will be created:
     * accessible on your host system on port `3306`
 * restful api
     * application programming interface written in Java using spring boot
-    * accessible through [http://localhost:8080]
+    * accessible through [http://localhost:8080](http://localhost:8080)
 * user interface
     * web frontend written with Angular
-    * accessible through [http://localhost:8081]
+    * accessible through [http://localhost:8081](http://localhost:8081)
 
-Currently there is only one rest endpoint which returns a list of people: [http://localhost:8081/v1/people]
+Currently there is only one rest endpoint which returns a list of people: [http://localhost:8080/v1/people](http://localhost:8080)
