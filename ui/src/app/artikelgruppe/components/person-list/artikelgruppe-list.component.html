@@ -1,0 +1,36 @@
+<ul
+  *ngIf="people; else loader"
+  role="list"
+  class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
+>
+  <li
+    *ngFor="let item of people | async"
+    class="col-span-1 divide-y divide-gray-200 rounded-lg bg-white shadow"
+  >
+    <div class="flex w-full items-center justify-between space-x-6 p-6">
+      <div class="flex-1 truncate">
+        <div class="flex items-center space-x-3">
+          <h3 class="truncate text-sm font-medium text-gray-900">
+            {{ item.ag_BEZEICHNUNG + "&nbsp;" + item.artikelgruppe_ID }}
+          </h3>
+
+          <div class="space-x-2">
+           
+
+            <span
+              class="inline-block flex-shrink-0 rounded-full bg-indigo-100 px-2 py-0.5 text-xs font-medium text-indigo-800"
+            >
+              {{ item.ag_BEZEICHNUNG }}
+            </span>
+          </div>
+        </div>
+
+      
+      </div>
+    </div>
+  </li>
+</ul>
+
+<ng-template #loader>
+    Loading...
+</ng-template>
